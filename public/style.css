@@ -1,0 +1,32 @@
+body {
+    font-family: sans-serif;
+    padding: 2rem;
+    background: #f9f9f9;
+  }
+  
+  .container {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  input {
+    width: 70%;
+    padding: 0.5rem;
+  }
+  
+  button {
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    cursor: pointer;
+  }
+  
