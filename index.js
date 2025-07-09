@@ -1,7 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const Todo = require("./models/Todo");
-require("./db");
 require('dotenv').config();
 
 
@@ -13,6 +12,7 @@ mongoose.connect(process.env.MONGO_URI, {
   .catch((err) => console.error("❌ MongoDB error:", err));
 
 const app = express();
+const PORT = process.env.PORT || 10000;
 app.use(express.json());
 app.use(express.static("public"));
 
@@ -43,6 +43,6 @@ app.delete("/todos/:id", async (req, res) => {
   res.status(204).send();
 });
 
-app.listen(3000, () => {
-  console.log("🚀 Server running at http://localhost:3000");
-});
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`✅ Server running on http://0.0.0.0:${PORT}`);
+  });
